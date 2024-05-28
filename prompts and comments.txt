@@ -1,0 +1,18 @@
+Generate well-described comments for the following code:
+```
+
+```
+
+// An array of objects representing the rows of the table body.
+
+prospects
+prospects-preview
+short-list
+
+phone-interview-questionnaire
+send-task
+task-form
+face-to-face-interview-msg
+interview-details
+interview-acceptance-sheet
+offer-msg
