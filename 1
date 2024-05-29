@@ -1,0 +1,40 @@
+              <li
+                className={`${checkboxHidden == true ? "hidden" : "flex"}`}
+                id="main"
+                onClick={() => {
+                  document
+                    .querySelectorAll(".checking input")
+                    .forEach((e: any) => {
+                      console.log(e);
+                      if (
+                        !(document.querySelector("#main input") as any)?.checked
+                      )
+                        e.checked = false;
+                      else e.checked = true;
+                    });
+                }}
+              >
+                <CustomCheckBox accentColor="#E1C655" />
+              </li>
+
+
+
+                  <li
+                    className={`checking ${
+                      checkboxHidden == true ? "hidden" : "flex"
+                    }`}
+                  >
+                    <CustomCheckBox accentColor="#E1C655" name="emailLists" onChange={handleCheck}/>
+                  </li>
+
+
+
+
+
+  function handleCheck() {
+    document.getElementsByName("emailLists").forEach((e:any)=>{
+      if (e.checked == false) {
+       ( document.querySelector("#main input") as any).checked = false
+      }
+    })
+  }
