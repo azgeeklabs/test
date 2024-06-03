@@ -1,0 +1,108 @@
+----------------------------Sign Up---------------------------
+{
+    "statusMsg": "fail",
+    "message": "Account Already Exists"
+}
+
+{
+  "message": "fail",
+  "errors": {
+      "value": "",
+      "msg": "Email is required",
+      "param": "email",
+      "location": "body"
+  }
+}
+
+{
+    "message": "success",
+    "user": {
+        "name": "test",
+        "email": "xxx@xxx123.com",
+        "role": "user"
+    },
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ZTQ1NjBiYmU4YjUyMzIzNWQwNDU1MSIsIm5hbWUiOiJ0ZXN0Iiwicm9sZSI6InVzZXIiLCJpYXQiOjE3MDk0NjMwNTEsImV4cCI6MTcxNzIzOTA1MX0.KCuatpIrqJno1E7HibXSuDr0pLReNSps91yfaEX-Ryo"
+}
+
+
+---------------------------Sign In--------------------------------------
+{"statusMsg":"fail","message":"Incorrect email or password"}
+
+{
+    "message": "success",
+    "user": {
+        "name": "test",
+        "email": "xxx@xxx123.com",
+        "role": "user"
+    },
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ZTQ1NjBiYmU4YjUyMzIzNWQwNDU1MSIsIm5hbWUiOiJ0ZXN0Iiwicm9sZSI6InVzZXIiLCJpYXQiOjE3MDk0NjgzNzgsImV4cCI6MTcxNzI0NDM3OH0.gxMLgWSQS5569fRqoi8nN7n5EQmALLsQNgzLb4s7b1w"
+}
+
+
+---------------------Token Decoded - Not Used Until Now-------------------------
+{
+  "id": "65e4560bbe8b523235d04551",
+  "name": "test",
+  "role": "user",
+  "iat": 1709463051,
+  "exp": 1717239051
+}
+
+
+--------------------------------------------------------------------------------------
+- Signin and signup and Reset Password responses are returning token.
+- Note: Backend reponse is providing me with user info in both Sign In/Sign Up. But I store the name in LocalStorage after SignIn Only.
+- Note: Signin and signup token is different (but same id, name, role).
+- Note: Reset Password token is different from Signin/Signup token (id only).
+
+- name: user object and token (Signin and signup).
+- role: user object and token (Signin and signup).
+- id: token only (Signin and signup and Reset Password).
+- email: user object only.
+-----------------------------------Forgot Password-----------------------------------
+{
+    "statusMsg": "fail",
+    "message": "There is no user registered with this email address  "
+}
+
+{"statusMsg":"success","message":"Reset code sent to your email"}
+
+
+-----------------------------------Verify Reset Code-----------------------------------
+{
+    "statusMsg": "fail",
+    "message": "Reset code is invalid or has expired"
+}
+
+{"status":"Success"}
+
+
+-----------------------------------Reset Password----------------------------------
+{
+    "statusMsg": "fail",
+    "message": "reset code not verified"
+}
+
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ZTQ4MWU1YmU4YjUyMzIzNWQyOGNjZSIsImlhdCI6MTcwOTQ3NDkwNywiZXhwIjoxNzE3MjUwOTA3fQ.iMESn9_JDUqYOfSO-XQkYO5-K7MbdltKtWH4TiZDtEk"
+}
+
+// Token Decoded
+{
+  "id": "65e481e5be8b523235d28cce",
+  "iat": 1709474907,
+  "exp": 1717250907
+}
+
+// Signin Token
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ZTQ4MWU1YmU4YjUyMzIzNWQyOGNjZSIsIm5hbWUiOiJuYW1lIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3MDk0NzUwMzUsImV4cCI6MTcxNzI1MTAzNX0.lgf_W0jCeqqYYw_PzpvCE_F99PH3iERGTqOpwApYXJ0
+{
+  "id": "65e481e5be8b523235d28cce",
+  "name": "name",
+  "role": "user",
+  "iat": 1709475035,
+  "exp": 1717251035
+}
+
+
+---------------------------------------------------------------------

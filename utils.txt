@@ -1,0 +1,33 @@
+window.location.replace()
+window.location.href = ...
+window.open()
+------------------------------------------------------
+import { useNavigate } from "react-router-dom";
+const nav = useNavigate();
+<p onClick={()=>{nav("/");}}>Click!</p>
+
+import { Link } from "react-router-dom";
+<Link to={`/`}>
+<p>Click!</p>
+</Link>
+
+import { useLocation } from "react-router-dom";
+const location = useLocation();
+console.log(location.pathname);
+
+path: "productDetails/:id",
+import { useParams } from "react-router-dom";
+const { id } = useParams();
+
+import { Navigate } from "react-router-dom";
+<Navigate to="/signin" />
+------------------------------------------------------
+import { useRouter } from 'next/navigation';
+
+import Link from 'next/link';
+
+import { usePathname } from "next/navigation";
+let path = usePathname();
+
+page({ params })
+const id = params.id;
