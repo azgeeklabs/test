@@ -19,3 +19,5 @@ offer-msg
 
 C:\Machine-Genius\app\_components\HR\00Hiring\01JobOpenings\03InProcessHiring
 C:\Machine-Genius\app\hr\hiring\job-openings\(In Process Hiring)\short-list
+
+https://chromewebstore.google.com/detail/show-vp-details/eajgjgklfnaicgfnkokjkidlpnbahcap
